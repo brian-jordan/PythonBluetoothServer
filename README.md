@@ -19,11 +19,25 @@ I have tested this code on the following two platforms:
 * RaspberryPi 3 (servo example and call-and-response example)
 * Sony VAIO Pro running Ubuntu 14.04 (call-and-response example)
 
-## Raspberry Pi 3 notes
+## Setup
 
-Although the Raspberry Pi 3 comes with a Bluetooth 4.0 module on board, getting it 
+On a laptop or other computer with a bluetooth adapter, all you should need to do to before running the
+examples is install the <b>pybluez</b> package:
 
-You will also need to run the server code as root; for example:
+<pre>
+% sudo apt install python-bluez
+</pre>
+
+The setup on Raspberry Pi 3 is slightly more complicated.  Following these 
+[directions](https://www.raspberrypi.org/forums/viewtopic.php?t=133263), we did the following:
+
+1. Edit <b>/lib/systemd/system/bluetooth.service</b> and add '-C' after 'bluetoothd'
+
+2. Reboot
+
+3. Run the command <tt>sudo sdptool add SP</b>
+
+On Raspberry Pi 3 you will also need to run the server code as root; for example:
 
 <pre>
 % sudo python3 lowhigh_server.py`
