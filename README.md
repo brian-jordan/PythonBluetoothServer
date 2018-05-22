@@ -28,14 +28,19 @@ examples is install the <b>pybluez</b> package:
 % sudo apt install python-bluez
 </pre>
 
-The setup on Raspberry Pi 3 is more complicated.  Following these 
-[directions](https://www.raspberrypi.org/forums/viewtopic.php?t=133263), we did the following:
+The setup on Raspberry Pi 3 is more complicated:
 
 1. Edit <b>/lib/systemd/system/bluetooth.service</b> and add '-C' after 'bluetoothd'
 
 2. Reboot
 
 3. Run the command <tt>sudo sdptool add SP</b>
+
+4. Run the command <tt>sudo apt-get install libbluetooth-dev</tt>
+
+5. Run the command <tt>sudo apt-get install python3-dev</tt>
+
+6. Run the command <tt>sudo pip3 install pybluez</tt>
 
 On Raspberry Pi 3 we also found it necessary to run the server code as root; for example:
 
