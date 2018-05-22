@@ -53,11 +53,19 @@ def main():
 
             while True:
 
-                data = client_sock.recv(BUFSIZE).rstrip() # remove linefeed, carriage-return
+                b = client_sock.recv(1)
+
+                print(b.decode('utf-8'))
+
+                continue
 
                 if len(data) > 0:  # avoid reporting empty messages (not sure why we get them!)
 
-                    print(data.decode('utf-8'))
+                    value = int(data.decode('utf-8'))
+
+                    print(value)
+
+                    client_sock.send((('LOW' if value < 5 else 'HIGH') + '.').encode('utf-8'))
 
         except IOError:
             pass
