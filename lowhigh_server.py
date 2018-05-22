@@ -2,6 +2,10 @@
 '''
 Subclasses BluetoothSocket to serve messages "LOW" and "HIGH" based on values received from
 client
+
+Copyright Simon D. Levy 2018
+
+MIT License
 '''
 
 from bluetooth_server import BluetoothServer

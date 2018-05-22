@@ -5,7 +5,6 @@ Serves a Bluetooth socket for running a servo on the Raspberry Pi
 MUST BE RUN AS ROOT (USE SUDO)
 '''
 
-from time import sleep
 import RPi.GPIO as GPIO
 
 GPIO.setmode(GPIO.BOARD)

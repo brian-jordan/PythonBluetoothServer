@@ -1,18 +1,38 @@
+'''
+Bluetooth socket support
+
+Copyright 2018  Emily Boyes, Gunnar Bowman, Trip Calihan, Simon D. Levy, Sheperd Sims
+
+MIT License
+'''
 
 import os
 
 import bluetooth as bt
 
 class BluetoothServer(object):
+    '''
+    Provides an abstract class for serving sockets over Bluetooth.  You call the constructor and the start()
+    method.  You must implement the method handleMessage(self, message) to handle messages from the client.
+    '''
 
     def __init__(self):
+        '''
+        Constructor
+        '''
 
-        # The service UUID to advertise
+        # Arbitrary service UUID to advertise
         self.uuid = "7be1fcb3-5776-42fb-91fd-2ee7b5bbb86d"
 
         self.client_sock = None
 
     def start(self):
+        '''
+        Serves a socket on the default port, listening for clients.  Upon client connection, runs a loop to 
+        that receives period-delimited messages from the client and calls the sub-class's 
+        handleMessage(self, message) method.   Sub-class can call send(self, message) to send a 
+        message back to the client.   Begins listening again after client disconnects.
+        '''
 
         # Make device visible
         os.system("hciconfig hci0 piscan")
@@ -73,5 +93,8 @@ class BluetoothServer(object):
                 break
 
     def send(self, message):
+        '''
+        Appends a period to your message and sends the message back to the client.
+        '''
         
         self.client_sock.send((message+'.').encode('utf-8'))
