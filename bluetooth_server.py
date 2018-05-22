@@ -51,21 +51,20 @@ def main():
             client_sock, client_info = server_sock.accept()
             print("Accepted connection from " +  str(client_info))
 
+            # Track strings delimited by '.'
+            s = ''
+
             while True:
 
-                b = client_sock.recv(1)
+                c = client_sock.recv(1).decode('utf-8')
 
-                print(b.decode('utf-8'))
-
-                continue
-
-                if len(data) > 0:  # avoid reporting empty messages (not sure why we get them!)
-
-                    value = int(data.decode('utf-8'))
-
+                if c == '.' and len(s) > 0:
+                    value = int(s)
                     print(value)
-
-                    client_sock.send((('LOW' if value < 5 else 'HIGH') + '.').encode('utf-8'))
+                    s = ''
+                    client_sock.send((('LOW' if value < 50 else 'HIGH') + '.').encode('utf-8'))
+                else:
+                    s += c
 
         except IOError:
             pass
