@@ -11,8 +11,8 @@ As a simple protocol, the server uses text messages delimited by a period ('.' c
 [example](https://github.com/simondlevy/PythonBluetoothServer/blob/master/lowhigh_server.py) 
 allows you to try out the code on an ordinary computer: your client sends period-delimited
 messages containing strings representing the values 0 through 100 ('0.', '1.',
-'2.', ..., '99.', '100.'), and the server sends back 'LOW' for values below 50,
-and 'HIGH' for values above.  I have tested this code on the following two
+'2.', ..., '99.', '100.'), and the server sends back 'LOW.' for values below 50,
+and 'HIGH.' for values above.  I have tested this code on the following two
 platforms:
 
 * RaspberryPi 3 (servo example and call-and-response example)
