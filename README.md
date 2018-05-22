@@ -34,13 +34,14 @@ The setup on Raspberry Pi 3 is more complicated:
 
 2. Reboot
 
-3. Run the command <tt>sudo sdptool add SP</tt>
+3. Run the following commands:
 
-4. Run the command <tt>sudo apt-get install libbluetooth-dev</tt>
-
-5. Run the command <tt>sudo apt-get install python3-dev</tt>
-
-6. Run the command <tt>sudo pip3 install pybluez</tt>
+<pre>
+    % sudo sdptool add SP
+    % sudo apt-get install libbluetooth-dev
+    % sudo apt-get install python3-dev
+    % sudo pip3 install pybluez
+</pre>
 
 On Raspberry Pi 3 we also found it necessary to run the server code as root; for example:
 
