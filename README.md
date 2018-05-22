@@ -18,3 +18,19 @@ I have tested this code on the following two platforms:
 
 * RaspberryPi 3 (servo example and call-and-response example)
 * Sony VAIO Pro running Ubuntu 14.04 (call-and-response example)
+
+## Raspberry Pi 3 notes
+
+Although the Raspberry Pi 3 comes with a Bluetooth 4.0 module on board, getting it 
+
+You will also need to run the server code as root; for example:
+
+<pre>
+% sudo python3 lowhigh_server.py`
+</pre>
+
+## Android app
+
+The easiest way to try out this code is with the [Android client app](https://github.com/simondlevy/BluetoothClient)
+that we developed to work with it.  This app uses the same simple protocol as the Python server, and has been
+tested with the servo and call-and-response examples.
