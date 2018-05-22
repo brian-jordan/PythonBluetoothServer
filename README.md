@@ -28,7 +28,7 @@ examples is install the <b>pybluez</b> package:
 % sudo apt install python-bluez
 </pre>
 
-The setup on Raspberry Pi 3 is slightly more complicated.  Following these 
+The setup on Raspberry Pi 3 is more complicated.  Following these 
 [directions](https://www.raspberrypi.org/forums/viewtopic.php?t=133263), we did the following:
 
 1. Edit <b>/lib/systemd/system/bluetooth.service</b> and add '-C' after 'bluetoothd'
@@ -37,7 +37,7 @@ The setup on Raspberry Pi 3 is slightly more complicated.  Following these
 
 3. Run the command <tt>sudo sdptool add SP</b>
 
-On Raspberry Pi 3 you will also need to run the server code as root; for example:
+On Raspberry Pi 3 we also found it necessary to run the server code as root; for example:
 
 <pre>
 % sudo python3 lowhigh_server.py`
