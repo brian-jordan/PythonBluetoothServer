@@ -20,17 +20,17 @@ class ServoServer(BluetoothServer):
         GPIO.setwarnings(False)
         GPIO.setup(11,GPIO.OUT)
 
-        pwm = GPIO.PWM(11, 50)
-        pwm.start(5)
+        self.pwm = GPIO.PWM(11, 50)
+        self.pwm.start(5)
 
     def handleMessage(self, message):
 
         # Convert [0,100] => [1,11]
-        duty = float(data)/10 + 1
+        duty = float(message)/10 + 1
 
-        # Don't know why we need this!
+        # Don't know why we need this range check!
         if duty >= 1 and duty <= 11:
-            pwm.ChangeDutyCycle(duty)
+            self.pwm.ChangeDutyCycle(duty)
 
 
 if __name__ == '__main__':
