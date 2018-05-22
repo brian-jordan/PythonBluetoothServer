@@ -21,7 +21,8 @@ I have tested this code on the following two platforms:
 
 ## Setup
 
-On a laptop or other computer with a bluetooth adapter, all you should need to do to before running the
+On a laptop or other ordinary computer with a bluetooth adapter, all you should need to do to before running the
+
 examples is install the <b>pybluez</b> package:
 
 <pre>
