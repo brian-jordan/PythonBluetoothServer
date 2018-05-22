@@ -34,7 +34,7 @@ The setup on Raspberry Pi 3 is more complicated:
 
 2. Reboot
 
-3. Run the command <tt>sudo sdptool add SP</b>
+3. Run the command <tt>sudo sdptool add SP</tt>
 
 4. Run the command <tt>sudo apt-get install libbluetooth-dev</tt>
 
