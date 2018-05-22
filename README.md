@@ -22,11 +22,13 @@ I have tested this code on the following two platforms:
 ## Setup
 
 On a laptop or other ordinary computer with a bluetooth adapter, all you should need to do to before running the
-examples is install the <b>pybluez</b> package:
+examples is install the <b>pybluez</b> package.  On Ubuntu and other Debian-based OSs:
 
 <pre>
 % sudo apt install python-bluez
 </pre>
+
+(I have not installed pybluez on Fedora.)
 
 The setup on Raspberry Pi 3 is more complicated:
 
