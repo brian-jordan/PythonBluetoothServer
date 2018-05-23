@@ -40,8 +40,8 @@ The setup on Raspberry Pi 3 is more complicated:
 
 <pre>
   % sudo sdptool add SP
-  % sudo apt-get install libbluetooth-dev
-  % sudo apt-get install python3-dev
+  % sudo apt install libbluetooth-dev
+  % sudo apt install python3-dev
   % sudo pip3 install pybluez
 </pre>
 
