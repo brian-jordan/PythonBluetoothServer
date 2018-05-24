@@ -2,14 +2,15 @@
 <img src="logo.png" width=500>
 This repository contains support for writing Python programs to serve sockets over Bluetooth.  The code derives from
 the term projects of four students in Washington and Lee's Spring 2018 course
-[CSCI 251: Android App Development](http://home.wlu.edu/~levys/courses/csci251s2018/).  The students originally
+<a href="https://home.wlu.edu/~levys/courses/csci251s2018/">CSCI 251: Android App Development</a>.  The students originally
 wrote code to support controlling a servo on a RaspberryPi, with the control signal coming from a simple Android
 app.  Eventually I was able to factor this Python code into an abstract Python
-[class](https://github.com/simondlevy/PythonBluetoothServer/blob/master/bluetooth_server.py), with the
+<a href="https://github.com/simondlevy/PythonBluetoothServer/blob/master/bluetooth_server.py">class</a>, with the
 servo code implemented as a 
-[sub-class](https://github.com/simondlevy/PythonBluetoothServer/blob/master/servo_server.py).  
+<a href="https://github.com/simondlevy/PythonBluetoothServer/blob/master/servo_server.py">sub-class</a>.
 
-As a simple protocol, the server uses text messages delimited by a period ('.' character).   For those without a Raspberry Pi or servo, a simple &ldquo;call and response&rdquo; 
+As a simple protocol, the server uses text messages delimited by a period ('.' character).   
+For those without a Raspberry Pi or servo, a simple &ldquo;call and response&rdquo; 
 [example](https://github.com/simondlevy/PythonBluetoothServer/blob/master/lowhigh_server.py) 
 allows you to try out the code on an ordinary computer: your client sends period-delimited
 messages containing strings representing the values 0 through 100 ('0.', '1.',
