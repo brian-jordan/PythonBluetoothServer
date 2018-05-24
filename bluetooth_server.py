@@ -1,7 +1,7 @@
 '''
 Bluetooth socket support
 
-Copyright 2018  Emily Boyes, Gunnar Bowman, Trip Calihan, Simon D. Levy, Shepherd Sims
+Copyright 2018  Gunnar Bowman, Emily Boyes, Trip Calihan, Simon D. Levy, Shepherd Sims
 
 MIT License
 '''
