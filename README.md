@@ -1,3 +1,5 @@
+<img src="logo.png">
+
 This repository contains support for writing Python programs to serve sockets over Bluetooth.  The code derives from
 the term projects of four students in Washington and Lee's Spring 2018 course
 [CSCI 251: Android App Development](http://home.wlu.edu/~levys/courses/csci251s2018/).  The students originally
