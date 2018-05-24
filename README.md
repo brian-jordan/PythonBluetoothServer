@@ -37,7 +37,7 @@ On Raspberry Pi 3 you will also need to edit
 On Raspberry Pi 3 we also found it necessary to run the server code as root; for example:
 
 <pre>
-% sudo python3 lowhigh_server.py`
+% sudo python3 lowhigh_server.py
 </pre>
 
 The <b>sudo</b> was not necessary on other computers.
