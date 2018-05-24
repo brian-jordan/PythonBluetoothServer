@@ -32,7 +32,7 @@ sudo python3 -m pip install pybluez
 </pre>
 
 On Raspberry Pi 3 you will also need to edit 
-<b>/lib/systemd/system/bluetooth.service</b> and add '-C' after 'bluetoothd'.  Then reboot.
+<b>/lib/systemd/system/bluetooth.service</b> and add <b>-C</b> after <b>bluetoothd</b>.  Then reboot.
 
 On Raspberry Pi 3 we also found it necessary to run the server code as root; for example:
 
