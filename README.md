@@ -24,35 +24,23 @@ I have tested this code on the following two platforms:
 
 ## Setup
 
-On a laptop or other ordinary computer with a bluetooth adapter, all you should need to do to before running the
-examples is install the <b>pybluez</b> package.  On Ubuntu and other Debian-based OSs:
+On Ubuntu and other Debian-based OSs like Raspbian:
 
 <pre>
-% sudo apt install python-bluez
+sudo apt-get install bluetooth libbluetooth-dev
+sudo python3 -m pip install pybluez
 </pre>
 
-(I have not installed pybluez on Fedora.)
-
-The setup on Raspberry Pi 3 is more complicated:
-
-1. Edit <b>/lib/systemd/system/bluetooth.service</b> and add '-C' after 'bluetoothd'
-
-2. Reboot
-
-3. Run the following commands:
-
-<pre>
-  % sudo sdptool add SP
-  % sudo apt install libbluetooth-dev
-  % sudo apt install python3-dev
-  % sudo pip3 install pybluez
-</pre>
+On Raspberry Pi 3 you will also need to edit 
+<b>/lib/systemd/system/bluetooth.service</b> and add '-C' after 'bluetoothd'.  Then reboot.
 
 On Raspberry Pi 3 we also found it necessary to run the server code as root; for example:
 
 <pre>
 % sudo python3 lowhigh_server.py`
 </pre>
+
+The <b>sudo</b> was not necessary on other computers.
 
 ## Android client app
 
