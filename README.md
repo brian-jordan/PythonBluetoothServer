@@ -7,7 +7,7 @@ wrote code to support controlling a servo on a RaspberryPi, with the control sig
 app.  Eventually I was able to factor this Python code into an abstract Python
 <a href="https://github.com/simondlevy/PythonBluetoothServer/blob/master/bluetooth_server.py">class</a>, with the
 servo code implemented as a 
-[sub-class](https://github.com/simondlevy/PythonBluetoothServer/blob/master/servo_server.py).
+[sub-class](https://github.com/simondlevy/PythonBluetoothServer/blob/master/servo_server.py) .
 
 As a simple protocol, the server uses text messages delimited by a period ('.' character).   
 For those without a Raspberry Pi or servo, a simple &ldquo;call and response&rdquo; 
